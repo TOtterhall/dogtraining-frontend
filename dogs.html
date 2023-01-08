@@ -5,8 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/main.css" />
-    <script src="/index.js" defer></script>
-    <title>Document</title>
+    <script src="/dogs.js" defer></script>
+    <title>Dogtraining frontend</title>
   </head>
-  <body></body>
+  <body>
+    <!-- //GET ALL- CONTAINER -->
+    <div class="container">
+      <button class="myBtn">Se alla tassavtryck...</button>
+      <div id="result-container"></div>
+    </div>
+
+    <!-- //POST FORM -->
+    <div id="containerPost">
+        <form id="postForm" method="POST">
+            <h3>Jag vill skapa en ny användare:</h3>
+            <input name= "dogName" type="text", id="nameOfTheDog" placeholder="Hundensnamn"/></br>
+            <input name="breed" type="text", id ="breed" placeholder="Hundras"/></br>
+            <input name="owner" type="text", id="owner" placeholder="Ägare"/></br>
+            <input name="email" type="text", id="epost"placeholder="E-post"/></br>
+            <input name="id" type="text" id="id" placeholder="id"/></br>
+
+            <button type="submit" value="Add">Skapa konto</button>
+            <div>
+                <h3>Med leriga tassar har nu:</h3>
+                <h1 id="newUser"></h1>
+            </div>
+        </form>
+  
+    </div>
+
+    <!-- //PUT FORM -->
+
+    <div id="containerPut">
+        <form id="putForm" method="PUT">
+          <h3>Jag vill ÄNDRA mina uppgifter:</h3>
+          <input name= "updateNameOfTheDog" type="text", id="updateNameOfTheDog" placeholder="Hundensnamn"/></br>
+          <input name="breed" type="text", id ="updateBreed" placeholder="Hundras"/></br>
+          <input name="owner" type="text", id="updateOwner" placeholder="Ägare"/></br>
+          <input name="email" type="text", id="updateEpost"placeholder="E-post"/></br>
+          <input name="updateId" type="text" id="updateId" placeholder="id"/></br>
+
+          <button type="submit" value="Add">Ändra</button>
+          <div>
+            <h3>Med leriga tassar har nu:</h3>
+            <h1 id="changedDog"></h1>
+          </div>
+        </form>
+      </div>
+
+        <!-- //DELETE FORM -->
+
+    <div id="containerDelete">
+        <form id="deleteForm" method="DELETE">
+            <h3>Jag vill RADERA mitt konto:</h3>
+            <input name="deleteId" type="text" id="deleteId" placeholder="id"/></br>
+            <button type="submit" value="DELETE">Radera användare</button>
+            <div>
+                <h3>Med leriga tassar har nu:</h3>
+                <h1 id="changedDog"></h1>
+            </div>
+        </form>
+
+
+    </div>
+
+    <div id="containerSpecial">
+        <form id="specialForm" method="GET">
+          <h3>Jag vill HÄMTA min hund:</h3>
+          <input name="special" type="text" id="special" placeholder="id"/></br>
+          <button type="submit" value="Get">HÄMTA användare</button>
+            <div>
+                <h3>Med leriga tassar har nu:</h3>
+                <h1 id="specialDog"></h1>
+            </div>
+        </form>
+
+
+    </div>
+
+
+  </body>
 </html>

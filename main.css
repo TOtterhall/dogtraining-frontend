@@ -15,7 +15,7 @@ body {
   background-size: cover;
 }
 .container,
-.specialResultContainer {
+.containerOne {
   background-color: rgba(105, 139, 128, 0.618);
   display: flex;
   flex-direction: row;
