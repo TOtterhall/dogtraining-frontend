@@ -124,10 +124,24 @@ deleteForm.addEventListener("submit", function (e) {
     })
     .then(function (data) {
       console.log(data);
-      const title = document.getElementById("changedDog");
+      const title = document.getElementById("#changedDog");
       title.innerHTML = data.dogName + " " + "har tassat in...";
     })
     .catch((error) => console.error("Error:", error));
 });
 
 //GET ONE
+const id = document.getElementById("specialId").value;
+specialForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const id = document.getElementById("specialId").value;
+
+  fetch(`http://localhost:3100/dogs/${id}`)
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    })
+    .catch((error) => console.error("Error:", error));
+});
