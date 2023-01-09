@@ -22,10 +22,10 @@ function loadPractice() {
     .then((res) => {
       return res.json();
     })
-    .then(function (ovningar) {
-      ovningar.forEach((ovning) => {
+    .then(function (dogs) {
+      dogs.forEach((dog) => {
         const div = document.createElement("div");
-        div.innerHTML = ovning.dogName + " " + "har tassat in...";
+        div.innerHTML = dog.dogName + " " + "har tassat in...";
         resultContainer.appendChild(div);
       });
     });
@@ -98,8 +98,6 @@ putForm.addEventListener("submit", function (e) {
     })
     .then(function (data) {
       console.log(data);
-      title = document.getElementById("changedDog");
-      title.innerHTML = data.dogName + " " + "har tassat in...";
     })
     .catch((error) => console.error("Error:", error));
 });
@@ -124,8 +122,6 @@ deleteForm.addEventListener("submit", function (e) {
     })
     .then(function (data) {
       console.log(data);
-      const title = document.getElementById("#changedDog");
-      title.innerHTML = data.dogName + " " + "har tassat in...";
     })
     .catch((error) => console.error("Error:", error));
 });
